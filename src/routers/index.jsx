@@ -39,6 +39,7 @@ const AppRouter = () => {
           </ProtectedRoute>
         }
       >
+        <Route path="/" element={<Homepage />} />
         {/* DEFAULT */}
         <Route path="/pages/homepage" element={<Homepage />} />
 
@@ -47,7 +48,7 @@ const AppRouter = () => {
         {/* <Route path="/records" element={<MedicalRecords />} /> */}
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/reminders" element={<ListReminder />} />
-        <Route path="/services/*" element={<ServiceRoutes />} />\
+        <Route path="/services/*" element={<ServiceRoutes />} />
         <Route path="/appointments/*" element={<AppointmentRoutes />} />
 
         {/* DOCTOR */}
@@ -62,6 +63,7 @@ const AppRouter = () => {
         <Route path="/services/*" element={<ServiceRoutes />} />\
         <Route path="/appointments/*" element={<AppointmentRoutes />} />
         <Route path="/users/*" element={<UserRoutes/>} />
+
       </Route>
     </Routes>
   );
