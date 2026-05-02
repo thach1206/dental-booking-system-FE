@@ -30,9 +30,7 @@ const LoginForm = () => {
         try {
             setLoading(true);
             setError('');
-            console.log('authService:', authService);
             const res = await authService.login(form.email, form.password);
-            console.log('authService:', authService);
             login(res.data);
 
             navigate('/');

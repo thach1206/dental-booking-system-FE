@@ -29,12 +29,6 @@ export default function ResetPassword() {
                     value: t('common.device', { count: 2 }),
                 })
             );
-            console.log('error',err?.message);
-            // console.log('err', err?.response?.data?.message);
-            // if (err?.response?.data?.message === 'New password must be different from old password')
-            //     toast.error('New password must be different from old password');
-            // else
-            //     toast.error('Token invalid or expired');
         }
     };
 

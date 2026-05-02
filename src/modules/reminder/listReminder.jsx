@@ -7,18 +7,12 @@ import CustomTable from '@/components/common/CustomTable';
 const ListReminder = () => {
     const { t } = useTranslation();
     const dispatch = useDispatch();
-    console.log(useSelector(state => state));
     const reminders = useSelector(state => state.reminder.reminders);
     useEffect(() => {
         const fetchReminders = async () => {
             try {
-                console.log('running here');
                 const res = await reminderService.getAllReminders();
-                console.log('dataa', res);
-                console.log('STATUS:', res.status); // 👈 sẽ chạy nếu success
-                console.log('DATA:', res.data);
                 dispatch(reminderActions.setReminders(res.data));
-                console.log(reminders, 'reminders');
             } catch (err) {
                 console.error('Failed to fetch reminders', err);
             }
@@ -26,7 +20,6 @@ const ListReminder = () => {
         fetchReminders();
     }, []);
     useEffect(() => {
-        console.log('UPDATED reminders:', reminders);
     }, [reminders]);
     const columns = [
         {
