@@ -1,0 +1,51 @@
+.login-container {
+  @apply min-h-screen flex items-center justify-center bg-gray-50;
+}
+
+.login-card {
+  @apply w-full max-w-md bg-white p-6 rounded-xl shadow;
+}
+
+.login-header {
+  @apply text-center mb-6;
+}
+
+.login-icon {
+  @apply mx-auto mb-2 text-red-500;
+}
+
+.login-title {
+  @apply text-xl font-semibold;
+}
+
+.login-subtitle {
+  @apply text-sm text-gray-500;
+}
+
+.login-form {
+  @apply space-y-4;
+}
+
+.login-input-group {
+  @apply space-y-1;
+}
+
+.login-password-wrapper {
+  @apply relative;
+}
+
+.login-password-toggle {
+  @apply absolute right-3 top-2.5 text-gray-500;
+}
+
+.login-button {
+  @apply w-full;
+}
+
+.login-footer {
+  @apply text-sm mt-4 text-center;
+}
+
+.login-link {
+  @apply text-blue-500 hover:underline;
+}
